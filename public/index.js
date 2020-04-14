@@ -24,15 +24,13 @@ firebase.auth().onAuthStateChanged(function(user) {
                 "Welcome User : " + email_id;
         }
     } else {
-        document.getElementById("user_div").style.display = "none";
-        document.getElementById("login_div").style.display = "block";
         window.location.href = "index.html";
     }
 });
 
 function login() {
-    var userEmail = document.getElementById("email_field").value;
-    var userPassword = document.getElementById("password_field").value;
+    var userEmail = document.getElementById("emailField").value;
+    var userPassword = document.getElementById("passwordField").value;
 
     firebase
         .auth()
